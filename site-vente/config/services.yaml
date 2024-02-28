@@ -1,0 +1,31 @@
+services:
+    # Configuration du repository User
+    App\Repository\UserRepository:
+        tags: ['doctrine.repository_service']
+            # Configuration du repository User
+    App\Repository\VehiculeRepository:
+        tags: ['doctrine.repository_service']
+
+    # default configuration for services in *this* file
+    _defaults:
+        autowire: true      # Automatically injects dependencies in your services.
+        autoconfigure: true # Automatically registers your services as commands, event subscribers, etc.
+
+    # makes classes in src/Controller/ available to be used as services
+    App\Controller\UserController:
+        public: true # Rendre le service public afin qu'il puisse être utilisé à l'extérieur du conteneur de services
+        tags: ['controller.service_arguments']
+            # makes classes in src/Controller/ available to be used as services
+    App\Controller\AuthController:
+        public: true # Rendre le service public afin qu'il puisse être utilisé à l'extérieur du conteneur de services
+        tags: ['controller.service_arguments']
+    App\Controller\VehiculeController:
+        public: true # Rendre le service public afin qu'il puisse être utilisé à l'extérieur du conteneur de services
+        tags: ['controller.service_arguments']
+    App\Controller\LegalController:
+        public: true # Rendre le service public afin qu'il puisse être utilisé à l'extérieur du conteneur de services
+        tags: ['controller.service_arguments']
+
+         
+
+ 

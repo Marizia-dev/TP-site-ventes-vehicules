@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Modifier un véhicule{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h1 class="card-title">Modifier un véhicule</h1>
+
+                        {{ form_start(form) }}
+                        {{ form_row(form.nom) }}
+                        {{ form_row(form.modele) }}
+                        {{ form_row(form.description) }}
+                        {{ form_row(form.image) }}
+                        {{ form_row(form.en_vente) }}
+                        <div class="text-center">
+                            {{ form_row(form.save, {'label': 'Modifier le véhicule', 'attr': {'class': 'btn btn-primary'}}) }}
+                        </div>
+                        {{ form_end(form) }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

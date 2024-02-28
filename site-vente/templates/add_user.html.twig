@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Ajouter un utilisateur{% endblock %}
+
+{% block body %}
+<div class="container">
+    <div class="row justify-content-center mt-5">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">
+                    <h1 class="text-center">Ajouter un utilisateur</h1>
+                </div>
+                <div class="card-body">
+                    {{ form_start(form) }}
+                    {{ form_row(form.email, {'attr': {'class': 'form-control mb-3'}}) }}
+                    {{ form_row(form.pseudo, {'attr': {'class': 'form-control mb-3'}}) }}
+                    {{ form_row(form.password, {'attr': {'class': 'form-control mb-3'}}) }}
+                    {{ form_row(form.save, {'attr': {'class': 'btn btn-primary'}}) }}
+                    {{ form_end(form) }}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

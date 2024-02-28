@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Nouveau Véhicule{% endblock %}
+
+{% block body %}
+<div class="container">
+    <div class="row justify-content-center mt-5">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">
+                    <h1 class="text-center">Nouveau Véhicule</h1>
+                </div>
+                <div class="card-body">
+                    {{ form_start(form) }}
+                    <div class="form-group">
+                        {{ form_row(form.nom, {'attr': {'class': 'form-control mb-3', 'placeholder': 'Nom'}}) }}
+                    </div>
+                    <div class="form-group">
+                        {{ form_row(form.modele, {'attr': {'class': 'form-control mb-3', 'placeholder': 'Modèle'}}) }}
+                    </div>
+                    <div class="form-group">
+                        {{ form_row(form.description, {'attr': {'class': 'form-control mb-3', 'placeholder': 'Description'}}) }}
+                    </div>
+                    <div class="form-group">
+                        {{ form_row(form.image, {'attr': {'class': 'form-control mb-3', 'placeholder': 'URL de l\'image'}}) }}
+                    </div>
+                    <div class="form-group">
+                        {{ form_row(form.en_vente, {'label': 'En vente', 'attr': {'class': 'form-check-input'}}) }}
+                    </div>
+                    <div class="form-group">
+                        {{ form_row(form.save, {'label': 'Ajouter un véhicule', 'attr': {'class': 'btn btn-primary btn-block', 'style': 'margin-top: 40px'}}) }}
+                    </div>
+                    {{ form_end(form) }}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
